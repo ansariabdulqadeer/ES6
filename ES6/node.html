@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1.difference between javascript and node js
+        // i.javascript:javascript is a programming language and it is used for client side activity for a web application.
+        // ii.Node.js: Nodejs is a javascript run time environment which is used for run the javascript code on server side, 
+        // accessing or performing any non-blocking operation of any operating system.
+         
+        //2.what is node.js
+        // i.node js is a javascript run time which is execute the javascript code on server side, accessing or performing any
+        //  non blocking operation of any operating system.
+        // ii. It is built on chrome's v8 thats why it is very fast. it is directly compile javascript code on native machine.
+        
+        // 3. why nodejs / major benifits of using node.js
+        // nodjs runs single threaded non-blocking asyncronusly programing and very memory efficient simple and fast, no-bufferng 
+        // and open source.
+
+
+        // 4. why node js is single threaded 
+        // i. nodejs uses single threaded model in order to support async processing.
+        // ii. with async processing, an applicaiton can perform better and more scallable under web loads.
+
+        //5. how do nodejs works / Architecture of node.js
+        //i. it works on single threaded event-loop and non-blocking i/o which can handle higher number of concurrent requests.
+        //ii. By using http module nodejs can run on any stand-alone web server.
+
+        // 6. where nodejs can be used
+        // i. nodejs can be used real-time web application ii. it can be used network applincation and distributed system 
+        // and obiously general purpose application.
+
+        // 7. How many types of API  functions are there in node.js
+        // i. Asynchronus non-blocking functions
+        // ii. Synchronus blocking functions
+
+        // 8. what is the difference between Asynchronous and non blocking
+        // i. we can make asynchronous http request that do not wait for the server to respond.
+        // ii. It continue to respond to the request  for which it has already received the server response.
+        //it execute the code simulteniously  eg.setTimeout
+
+        // i. non-blocking used regards i/o operations.
+        // ii. They immediately respond wahtever data is available and keep running as per the request.
+
+        // 9. what is package.json
+        // It is the heart of the entire application.
+        // ii. It contains the meta data of the project where we can define the properties of the package.
+
+        // 10.what do you understand by Event-driven programming
+        // Event driven programming is a programmming approach that makes use of events for triggering various function.
+        //Event driven programming makes use of besically two concepts
+        // i. Event handler:call back function that is called when event is triggered
+        // ii. there will be  main loop which liten for event triggered so its called the associated event handler for that event.
+
+
+        //11. what is event loop in nodejs and how does it work
+        // i. It handles all asynchronous callback in an application.
+        //ii. simply event loop has one job it is monitor the call stack and callback que if the call stack is empty then its 
+        //    take the first event from the que. eg setTimeOut
+
+        //12. what is REPL in the context of nodejs
+        //  REPL stands for read evaluate print loop basicallly it is like we are print javascript code on console similerly
+        //  we can run nodejs code on command so its called REPL 
+        //  R: is read and E: means evaluate or process and p: print final out put and L: its loop when we pressed ctrl+c twice 
+        //  then we can come out from loop.
+
+        // 13. List down the tasks which should be done asynchronusly using event loop
+        //     Input output operations   => Heavy computations      =>Blocking operations
+
+        // 14. what do you understand by test pyramid
+        // Unit Tests    =>   Integration Tests    =>  End To End
+        // i. unint tests: In unit test we can individual functions which is very fast
+        // ii. Integration Tests:  In integration test we can one module and their dependency
+        // iii. End to End :  here we can test complete system from top to bottem 
+
+        //15. what is error first call back in nodejs
+        //error and success
+        // if(err){
+        //     
+        // }
+        //i.in node js error is fixed callback if error come return it
+        //ii. if no error return success response
+
+
+        // 16.Explain the purpose of module.exports
+        // module in node.js is used to encapsulate all related data into single unit which is used to shift from one page to 
+        //another by import  
+        //here module is a variable and expots is a object which is expose as a module
+
+        // 17. what is reactor pattern in nodejs 
+        // reacter pattern is a concept of non-blocking i/o operation 
+        // it helps to generation of the event queue in node.js
+
+        //18. what is difference between font-end and back-end
+        // i. front end refers to the user interface or whatever user see on the browser called front end 
+        // eg html,css and javascript
+        // ii.  backend means server,application and database that works behind the scene to deliver information to the user
+
+        //19. list down major security implementation within node.js
+        //i. Authentication:  JWT token
+        // ii. Error handling:  
+
+        //20. callback hell
+        // :callback hell simply we can call back multiple which are depends each other called callback hell.
+        //when javascript developer try to execute multiple asyncrnous operations one after another which is hard to read and debug. 
+
+
+        //21. Explain libuv
+        // libuv is a nodejs library which is used for asynchronous i/o operation and high performance server
+
+        // 22. Middleware
+        // Middleware is a function which has access request and response objects
+        // like eg if you want any user can't visit particular page whithout login and registration then we are using middleware.
+        // simple we are using next().
+
+        //23. list down the arguments that async.queue takes as input
+        // Task funciton and concurrency value
+
+        // 24. difference between spawn() and fork() methods in node.js
+        //i. The spawn() method is used to launch the new process which provided set of commands
+        //ii. fork is sub set mehod of spawn() that execute the new instance of the V8 engine.
+
+        //25. what is express.js package:
+        // Express.js is a lightweight and flexible framework of node.js that management data-flow between server and routes 
+        // in the server-side applications.
+
+        //26. Ajax
+        // Ajax is a client side technology 
+        // it is widely used to updating or modifying the web page content without refresh the page.
+        
+        
+        //27.What is REST api 
+        // Rest Api (application programming interface)that uses http request to get,put,post and delete data  
+        // By using REST api we can access the data in json and xml foramt 
+
+        //28.callback
+        //Callback function: Any function that is passed as an argument to another function called callback function.
+        // A callback function can run after another function has finished.   
+
+        // fun1=(name,test)=>{
+        //     console.log(name);
+        //     test();
+        // }
+
+        // fun2=()=>{
+        //     console.log("hello");
+        // }
+        // fun1("abdul",fun2)
+
+        //29.Promises in javascript
+        // A promises is an object that may produce a single value some times in the future: either resolved or rejected
+        //eg. we request data from the server if there is any network error then it will reject and if there is no error then resolve.
+    //    let trst=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         let name="abdul";
+    //         res(name);
+    //     },8000)
+    //    });
+
+    //    trst.then((something)=>{
+    //         console.log(something);
+    //    }).catch((test)=>{
+    //     console.log(test);
+    //    })
+       //30. local  storage vs session vs cookie
+       //Local storage: Local storage are permanently its space is 5 to 10mb it only delete by using localStrage.clear()
+                        // its support client side only.
+       //session: Session storage validy only same tab if we open new tab then its destroyed and its storage 5mb its 
+                 //support client side only.
+       //cookie: Cookie storage we can set manualy expiry date its storage 5kb its support client and server side
+
+       //31. json
+       //json stands for javascript object notation
+       //It is widedly used to send the data from server to web page. it light weight
+       //it is language independent 
+
+
+    //32.  session and cookies
+    //session are stored in server side and it is more secure then the cookie becuase it store the data in server side.
+    //when we login then it create session id which is stored in cookie when we logout then session destroyed.
+    //cookie is a browser side storage and we can stored limited data in cookie and it is less secure
+       
+    </script>
+</body>
+</html>

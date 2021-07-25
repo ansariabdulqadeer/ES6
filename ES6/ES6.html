@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // oops concept:
+        //object oriented programming language aims to implement real world entity like eg
+        //there is ola uber ,google pay , railway reservation before oop we can manualy do but after oops we are
+        // using software that means we can convert any real senario in software called oop .
+        // inheritence: means some changes changes
+        // encapsulation: hiding
+        // polymorphysm: multiple way to do method overloading:a class has multiple method with same name but different parameter names
+        //method overrriding: same mehtod with same parameter with is a relationship must
+        // abstraction: hiding the implementation and showing only functionality.
+
+        //1.template literals(Template string)
+        //in ES6 we are using backticks(``) to define string.
+        // ES5
+        //         console.log("hello im abdul" + " i am from pune.");
+        //         // ES6
+        //         console.log(`hello im abdul i am from pune.`); //here we no need to use concat
+
+        // ES5
+        // let name = "abdul";
+        // let surname = "ansari";
+        //         console.log("my name is " + name + " and surname is " + surname);
+        //         // ES6
+        //         console.log(`my name is ${name} and surname is ${surname}`);
+
+        //         //here we can calsulate expression as well
+        //         // ES5
+        //         let a = 10;
+        //         let b = 20;
+        //         // console.log("addition of two number a+b =" + (a + b) + ' and /n not ' + (2 * a + b));
+        //         // ES6
+        //         console.log(`addition of two nuber a+b = ${a+b} and
+        // not ${2*a+b}`);
+        // console.log(`${name}`.includes("dul"));
+        // console.log(`${name}${surname} `.repeat(10));
+        // string methods
+        //There is 4 new string methods intoduce in ES6 which is used for validation and return boolean value
+        // console.log(`${name}`.startsWith('a'));
+        // console.log(`${name}`.endsWith('l'));
+        // console.log(`${name}${surname} `.repeat(10)) //here we print console multiple time
+
+        //same above eg just data store in variable so we no need to write expression multiple time.
+        // console.log(name.startsWith('a'));
+        // console.log(surname.endsWith('i'));
+        // console.log(name.includes('du'));
+        // console.log(`${name}${surname} `.repeat(10));
+        //2222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222
+        //  destructuring Array:
+        // The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values 
+        // from arrays, or properties from objects, into distinct variables.
+
+        // ES5
+        // let array = ["mango", "apple", "bananna", "javascript", "python"]
+        // a = array[0];
+        // b = array[1];
+        // c = array[2];
+        // d = array[3];
+        // e = array[4];
+        // console.log(b);
+
+        // ES6
+        // let array = ["mango", "apple", "bananna", "javascript", "python"]
+        //     // let [a, b, c, d, e] = array;
+        //         // console.log(b);
+        //     let [a, , , , elast] = array;
+        //     console.log(`my favorite fruit is ${a} and i know ${elast}`)
+
+        // about = {
+        //         name: "umer",
+        //         address: "sakinaka",
+        //         phone: 7044444444
+        //     }
+            //     // ES5
+            //     // console.log(about.address);
+
+
+
+        // // ES6
+        // let {
+        //     name,
+        //     address,
+        //     phone
+        // } = about;
+        // console.log(phone, address);
+
+
+        // ES6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        // By Thapa in one video
+        // 1. var,let and constant
+        // var is a function scope and let and constant is a block scope
+        //we can reassign var and let value but we cannot reassign constant value
+
+
+        function checks() {
+            // var a = 10;
+            // let b = 20;
+            // const c = 30;
+            if (true) {
+                // let b = 10;
+                // var a = 20;
+                // const c = 40;
+                // console.log(c);
+            }
+            // console.log(a);
+        }
+        // console.log(c);
+        // checks();
+
+
+        // 2.Destructuring
+
+        // the destructuring make it possible to unpack values from array and properties from object into distinct
+        // variables.
+        // let me = {
+        //         name: "abdul",
+        //         age: 24,
+        //         gender: "male"
+        //     }
+        // console.log(me.age);  //phle agr mai simply aisa likhta tha to mujhe age malum pad jata tha mgr mai chahta hu ki mai sirf age likhu aur mujhe wo value mil jaye.
+        // let a = me.age;
+        // let b = me.name;
+        // let c = me.gender;
+
+        // console.log(a, b); //phle mai ye tarike se age ko fetch krta tha
+        // let {
+        //     name,
+        //     age,
+        //     gender
+        // } = me;
+        // console.log(name, age, gender);
+
+
+
+
+        //3.template literals(Template string)
+        //in ES6 we are using backticks(``) to define string.
+        // ES5
+        //         console.log("hello im abdul" + " i am from pune.");
+        //         // ES6
+        //         console.log(`hello im abdul i am from pune.`); //here we no need to use concat
+
+        //         // ES5
+        // let name = "abdul";
+        // let surname = "ansari";
+        //         console.log("my name is " + name + " and surname is " + surname);
+        //         // ES6
+        //         console.log(`my name is ${name} and surname is ${surname}`);
+
+        //         //here we can calsulate expression as well
+        //         // ES5
+        //         let a = 10;
+        //         let b = 20;
+        //         // console.log("addition of two number a+b =" + (a + b) + ' and /n not ' + (2 * a + b));
+        //         // ES6
+        //         console.log(`addition of two nuber a+b = ${a+b} and 
+        // not ${2*a+b}`);
+
+
+        // string methods
+        //There is 4 new string methods intoduce in ES6 which is used for validation and return boolean value
+        // console.log(`${name}`.startsWith('a'));
+        // console.log(`${name}`.endsWith('l'));
+        // console.log(`${name}`.includes("dul"));
+        // console.log(`${name}${surname} `.repeat(10)) //here we print console multiple time
+
+        //same above eg just data store in variable so we no need to write expression multiple time.
+        // console.log(name.startsWith('a'));
+        // console.log(surname.endsWith('i'));
+        // console.log(name.includes('du'));
+        // console.log(`${name}${surname} `.repeat(10));
+
+
+        // 4.Default arguments
+        // its means here we no need to pass arguments inside function.
+        // function funAge(age, number) {
+        //     return age + ' ' + number; //its not a default argument because here we pass argument
+        // }
+        // funAge(18);
+        // console.log(funAge(18, 58));
+
+
+        // function funagesss(age = 18) {
+        //     return age;
+        // }
+        // console.log(funagesss()); //it is a default argument because here we not pass argument.
+
+        // funages = (age = 10) => {
+        //     return age;
+        // }
+        // console.log(funages())
+        // 5.Object properties
+        // basically here we access the object property. ;like above eg
+
+
+        // 6.Arrow Function
+        // funAges = (name, age) => {
+        //     return name + ' ' + age;
+        // }
+        // console.log(funAges("abdul", 24));
+
+
+
+        // ..............................................................................................................................................................
+        //     1.Syncronous and asyncronous in javascrip:
+        //     1.1: In sychronous code is executed in sequence.
+        //    1.2: asyncronous does not wait its executed simulteniously and make your site responsive
+
+
+        // eg synchronous:
+        // fun2 = () => {
+        //     console.log("hey i am also a function 2")
+        // }
+        // fun1 = () => {
+        //     console.log("hey hello i am function 1"); //it is synchronous beacuse here first stmt is completed then second stmt is started its execution.
+        //     fun2()
+        //     console.log("he hello i am function 2")
+
+        // }
+        // fun1();
+
+        // eg.Asynchronous
+        // fun2 = () => {
+        //     setTimeout(() => {
+        //         console.log("starts again "); //its a Asyncronous beacuse here we are using timeout method and its not wait
+        //     }, 3000);
+        // }
+        // fun1 = () => {
+        //     console.log("start 1")
+        //     fun2();
+        //     console.log("end 1")
+        // }
+        // fun1();
+
+
+        // 2. Event Lopp:
+        // simply event loop has one job. It is monitor the call stak and the callbck queue. if the call stack is empty
+        // then its take the first event from the queue and runs it.
+        // it is simply use asynchronous.plz reffer javascript event loop img
+
+
+
+        // 3.closure
+        // in closure inner function can access the outer function variables/parameter as well as all the global
+        //  variables.
+        // let c = 30;
+        // outer = (a = 4) => {
+        //     let b = 10;
+        //     inner = () => {
+        //         let sum = a + b + c;
+        //         console.log(sum);
+
+        //     }
+        //     inner();
+        // }
+
+        // outer();
+           
+      
+
+        // 5.prototype:
+        // All JavaScript objects inherit properties and methods from a prototype.
+        // whenever we print object in console we see there is (__proto__:object) basically this is prototype.
+
+        // object literal 
+        // obj1 = {
+        //     name: "abdul",
+        //     age: 24,
+        //     address: "kondhwa"
+        // }
+        // console.log(obj1);
+
+
+        //object by using constructer
+        // function obj2(givenName, surname) {
+        //     this.name = givenName,
+        //         this.store = surname
+
+        // }
+        // let obj = new obj2("abdul", "ansari");
+        // console.log(obj)
+
+
+        //6. callback hell
+        // :callback hell simply we can call back multiple which are depends each other called callback hell.
+        //when javascript developer try to execute multiple asyncrnous operations one after another which is hard to read and debug. 
+
+
+        // condition
+        // 2s print roll no
+        // after 2s print name and age
+        // after 2s print sex
+
+        // test1 = () => {
+        //     setTimeout(() => {
+        //             let roll_no = [1, 2, 3, 4, 5, 6];
+        //             console.log(roll_no);
+        //             setTimeout((rollno) => {
+        //                 let biodata = {
+        //                     name: "abdul qadeer",
+        //                     age: 24
+        //                 }
+        //                 console.log(`my roll no is ${rollno}. I am ${biodata.name} and i am ${biodata.age} years old.`);
+        //                 setTimeout(() => {
+        //                     let sex = "male";
+        //                     console.log(sex);
+        //                 }, 2000)
+        //             }, 2000, roll_no[2])
+        //         }, 2000) //its a call back function because we call after 2s.
+        // }
+
+        // test1();
+
+        // testing = () => {
+        //     setTimeout(() => {
+        //         var rollno = [1, 2, 3, 4, 5];
+        //         console.log(rollno[2]);
+
+        //         setTimeout(() => {
+        //             Object = {
+        //                 name: "abdul",
+        //                 surnam: "ansari"
+        //             }
+        //             console.log(Object.name)
+
+        //             setTimeout(() => {
+        //                 sex = ["male", "female"]
+        //                 console.log(sex[0])
+        //             }, 2000)
+        //         }, 2000)
+        //     }, 2000)
+        // }
+        // testing();
+
+
+        // 7.Promises in javascript
+        // A promises is an object that may produce a single value some times in the future: either resolved or rejected
+        //eg. we request data from the server if there is any network error then it will reject and if there is no error then resolve.
+        // promises you can do two type 1. as a function constructor 2.promise as a object.
+        // when we create promise we need a executer funtion and pass two parameter resolve and reject.
+
+        // in promises there is three stage suppose you give the task "I will call you at 10am tomaorrow."
+        //    i. pending:which means your waiting for tomorrow this is pending.
+        //    ii. resolve:which means you have done your task.
+        //    iii. reject: which means you have not complete your task
+
+
+        // eg. There is a task you have to print roll no after 2 seconds.
+        // and you have to print name and age after 2 seconds
+
+        // let obj1 = new Promise((resolve, reject) => {
+        //     //  here first we need a object promise which is store in a varible
+        //     //     and pass two arguments resolve,  reject.
+        //         setTimeout(() => {
+        //             let roll_no = [1, 2, 3, 4, 5, 6]; //here we assign roll no in array.
+        //             resolve(roll_no); //its means this problem is solved
+        //             // reject('this is rejected');
+        //         }, 2000)
+        //     })
+            // 2.promise as a object.
+            // const biodata = (test) => {
+            //     return new Promise((resolve, reject) => {
+            //         setTimeout((test) => {
+            //             let bio = {
+            //                 name: "abdul qadeer",
+            //                 age: 24
+            //             }
+            //             resolve(`my roll no is ${test} and my name is ${bio.name} and i am ${bio.age} years old.`);
+            //         }, 2000, test)
+            //     })
+
+        // }
+
+        // promise consume/receiving value
+        // obj1.then((rollno) => { //when we use resolve then we need to pass then() and store in parameter
+        //         console.log(rollno);
+        //         // return biodata(rollno[0]);
+        //     })
+        // .then((kucbhi) => {
+        //     console.log(kucbhi)
+        // })
+        // .catch((rollno) => {
+        //     console.log(rollno)
+        // })
+
+//another eg of promises:
+
+// person=()=>{
+//     return new Promise (function(resolve,reject){
+//       setTimeout(()=>{
+//             let error=false;
+//             if(!error){
+//                 console.log("you get the data from server");
+//                 resolve();
+//             }else{
+//                 console.log("there is error");
+//                 reject();
+//             }
+//         },3000)
+//     })
+// }
+
+// person().then(()=>{
+// console.log(`thanks for resolving`);
+// }).catch(()=>{
+//     console.log(`sorry bad luck`);
+// })
+
+        // very important topic 
+        //Async/await
+        // "async and await make promises easier to write"
+        // async makes a function return a Promise
+        // await makes a function wait for a Promise
+        //Async functions return a promise. Await waits untill the function or promise resolve or rejected.  
+
+
+        // eg
+
+        // async function getData() {
+        //     let store = await obj1
+        //     console.log(store)
+
+        //     // let store1 = await biodata(store[2])
+        //     // console.log(store1)
+        //     // return store1;
+        // }
+        // let test = getData().then((kuchbhi) => {
+        //     console.log(kuchbhi);
+        // });
+
+
+
+
+
+        // advance part
+
+        // 1.This keyword :this keyword reffer current object.
+        // It has different values depending where it is used.
+        // i. Alone, this refer to the global object
+        // eg
+        // console.log(this);
+
+
+
+        // ii.In a regular funtion this refer to global object.
+        // eg.
+        // function sum() {
+        //     let add = 2 + 2;
+        //     console.log(add);
+        //     console.log(this); //its refers to global object (widow object);
+        // }
+        // sum()
+
+
+        // iii. In a method  or inside object
+        // obj = {
+        //     name: "abdul bhai",
+        //     age: 24,
+        //     sum: function() {
+        //         var add = 3 + 4;
+        //         console.log(add);
+        //         console.log(this); //this is refers to the current object
+        //     }
+        // }
+        // obj.sum();
+
+
+        // iv. in strict mode this refers undefined
+
+
+
+        // 2.Callback function: Any function that is passed as an argument to another function called callback function.
+        // A callback function can run after another function has finished.
+        //eg. some data comes from the server so its take the time and we want to execute that data first so we are using callback function.
+
+        // eg
+        //  //its not a call back function beacuse here first function is not complate there
+        //     //execution and second function call. so this situation we are using callback function.
+        //     abdul = () => {
+        //     setTimeout(() => {
+        //         console.log(`i will call you`);
+        //     }, 3000)
+
+        // }
+
+        // hamid = () => {
+        //     console.log(`ok`)
+        // }
+        // abdul();
+        // hamid();
+
+
+
+        // eg 1
+        // personA = (name, test) => {
+        //    setTimeout(()=>{
+        //     console.log(`i will call you later abdul ${name}`);
+
+        //         test();
+
+        //    },4000)
+          
+        // }
+        // personB = () => {
+        //     console.log(`ok`);
+        // }
+
+        // personA("qadeer", personB);
+
+
+
+        //another eg 2
+
+    //     check=(percentage,kuchbhi)=>{
+    //         setTimeout(()=>{
+    //             console.log(`you get ${percentage}%`)
+    //             kuchbhi();
+    //         },3000)
+           
+    //     }
+
+    //    pass=()=>{
+    //        console.log(`congratulation abdul qadeer you are passed.`)
+    //    }
+
+    //    check(90,pass);
+      
+
+        //////////////////////////////////////////////////////
+        // Es6 by mosh
+        // eg of let,var,const
+        // for (let i = 0; i < 5; i++) {
+        //     console.log(i);
+        // }
+        // console.log(i);
+        // console.log(i);
+        // console.log(i);
+
+
+        // console.log(this);    //It will reffer  to the window property.
+
+        //
+
+        //var: Using var, variables are function-scoped because their visibility is limited to the function. When you try to use it 
+        // outside of the function, you’ll get an error.
+
+    //  let test=new Promise((res,rej)=>{
+    //     setTimeout(()=>{
+    //         let name="abdul";
+    //         res(name);
+    //         // rej("rejected");
+    //     },8000)
+    //    })
+    
+    //    test.then((something)=>{
+    //     console.log(something);
+    //    }).catch((error)=>{
+    //     console.log(error)
+    //    })
+
+
+//    async function getData(){
+//       let store=  await test
+//       console.log(store);
+//    }
+// var m, n;
+// for(m=1;m<=5;m++)
+// {
+// for(n=m;n<=5;n++)
+// {
+// document.write(""+n+" ");
+// }
+// document.write('<br/>');
+// }
+
+// let i,j
+// for(i=1;i<=5;i++){
+//     for(j=5;j<=i;j--){
+//         console.log(j);
+//     }
+//     console.log('<br/>');
+// }
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//what is hoisting in javascript
+//i. hoisting is a javascript mechanism where variables and function declarations are moved on the top of their scope before 
+//the code execution/function calling
+
+//i. In another words if we call the function before declaration of the function so simply its called hosting
+
+//all example related to function
+//eg
+
+//    sum(10,20)
+
+//     function sum(a,b){            //this is hoisting because here we can call function before declare function
+//         add=a+b;                  
+//         console.log(add);
+//     }
+
+    //when we run above code then javascript engine move the function declaration on the top just before function call.
+    //eg
+
+    // function sum(a,b){
+    //     add=a+b;
+    //     console.log(add);
+    // }
+
+    // sum(10,20);
+
+    // ii. hoisting is not working on funciton expression 
+    //eg. 
+    
+    // sum(10,20);
+    // var sum=function (a,b){       //this is function expression and it is not working in funciton hoisting
+    //     add=a+b;
+    //     console.log(add);
+    // }
+
+    // iii. Function hoisting is not working inside prenthesis()
+    //eg.
+    // sum(10,20);
+    // (function sum(a,b){
+    //     add=a+b;
+    //     console.log(add);
+    // })
+
+
+    // iv. hoisting is not working on arrow function
+    //  sum(10,5)
+    //     sum=(a,b)=>{
+    //         add=a+b;
+    //         console.log(add);
+    //     }
+
+
+    //all example related to variable hoisting
+        //eg
+
+          
+    // console.log(abc);     //it a hoisting 
+    // var abc="abdul";
+   //output undefined
+
+   //lets see how hoisting working 
+//    var abc=undefined     //because hoisting move top where variable declered
+//    console.log(abc);
+
+
+//hoisting is not working let, const and if we can't define variable type
+//  console.log(abc);     //here hoisting not working 
+//     let abc="abdul";
+
+    //  console.log(abc);     //it a hoisting 
+    // const abc="abdul";
+
+
+    // console.log(xyz)
+    //  xyz=10;
+
+
+
+    //hoisting by using varible and function both
+
+    // eg
+
+//     console.log("i am a "+job);
+//     var job="web developer";
+//     console.log("i am a "+job);
+
+//     function trying(){
+//         console.log("i am a "+job);
+//         var job="full stack developer";
+//         console.log("i am a "+job);
+//     }
+// trying();
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//spread operator:Spread operator thats allow you to access the content of iterable object like eg array,object literals and string.
+//iterable object is an object that access its content for (...)loop.
+
+//i. its replace apply
+// eg:
+
+// function addition(a,b,c){
+//     console.log(a+b+c)
+// }
+// add(2,5,6);
+// array=[2,5,6];   //if we want to pass this array as a argument then we are using apply method
+
+// addition.apply(null, array); 
+
+//but its easy when we use spread operator
+// eg
+
+// addition(...array);    //so here instead of apply we can use spread operator
+
+
+
+    //ii. copy one array into another by using ES5 
+    // array1=[23,43,2]
+    // array2=array1 
+    // console.log(array2);   //both work fine
+    // console.log(array1); 
+
+    //but when we add sum element then what happend
+    // array1.push(4,5)
+    // console.log(array1); //its work fine
+    // console.log(array2);   //here is the problem its effect on second array as well 
+    
+    //ES6
+    // copy one array into another by using spread operator
+    // array1=[23,43,2]
+
+    // array2=[...array1];
+    // console.log(array2);
+    // console.log(array1);
+
+    // array2=[...array1,3,4]
+    // console.log(array2)    
+    // console.log(array1);    //here not effect on second array
+    
+
+    // iii.  concat two array its work only two arrays
+
+    // arr=["abdul",32,'something',23];
+    // arr1=["java","python","node.js"];
+
+    // arr3=arr.concat(arr1);    //here we use concat
+    // console.log(arr3);
+    
+//using spread operator
+    // arr=["abdul",32,'something',23];      
+    // arr1=["java","python","node.js"];
+    // arr4=[131,234234,23423]
+    // arr3=[...arr,...arr1];
+    // arr5=[...arr,2,3,...arr1,4,6,...arr4];    //here we can combine multiple array by using spread operator.
+    // console.log(arr5);
+
+
+
+
+
+//spread operator by using object literals
+// const foo = [
+//   'hello',
+//   'bonjour',
+//   'konnichiwa'
+// ];
+// const bar = [...foo];    //its return as a array
+// const bar = {...foo};          //its return as a object
+
+// console.log(bar);
+
+
+
+    //combined two object
+//     const foo = {
+//   english: 'hello',
+//   french: 'bonjour',
+//   japanese: 'konnichiwa'
+// };
+// const bar = {
+//   german: 'gutentag',
+//   canadian: 'hello-ey'
+// };
+// const baz = {...foo, ...bar};
+
+// console.log(baz);
+////////////////////////////////////////////////////////////////////////////////////////////////
+//how we use return
+// function testing(a,b){
+//     return a-b;
+// }
+// console.log(testing(10,20));
+
+////////////////////////////////////////////////////////////////////////////////////
+//constructor in javascript:A constructor is a function that creates an instance of a class which is typically called an
+// “object”. In JavaScript, a constructor gets called when you declare an object using the new keyword.
+
+// function User(first, last) {
+//   this.firstName = first
+//   this.lastName = last
+// }
+
+
+// var user1 = new User("Jon", "Snow")
+// console.log(user1)
+// var user2 = new User("Ned", "Stark")
+// console.log(user2)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
